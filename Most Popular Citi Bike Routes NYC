@@ -1,0 +1,20 @@
+SELECT concat(start_station_name, " To ", end_station_name) as CombinedStation, count("CombinedStation") as Trips
+FROM `bigquery-public-data.new_york.citibike_trips` 
+group by combinedStation
+order by Trips desc
+LIMIT 10
+
+#data from July 2013 to Oct 2016
+CombinedStation                                                         Trips
+Central Park S & 6 Ave To Central Park S & 6 Ave                        47215
+Grand Army Plaza & Central Park S To Grand Army Plaza & Central Park S  18292
+Broadway & W 60 St To Broadway & W 60 St                                16626
+Centre St & Chambers St To Centre St & Chambers St                      13979
+12 Ave & W 40 St To West St & Chambers St                               12417
+W 21 St & 6 Ave To 9 Ave & W 22 St                                      11778
+W 21 St & 6 Ave To W 22 St & 10 Ave                                     10751
+West St & Chambers St To West St & Chambers St                          10672
+West Thames St To Vesey Pl & River Terrace                              10002
+E 7 St & Avenue A To Lafayette St & E 8 St                              9888
+
+
